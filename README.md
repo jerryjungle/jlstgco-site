@@ -24,7 +24,7 @@ Hosted on GitHub Pages. Every change saved to the `main` branch goes live on jls
 
 To undo a change: open the file's History on GitHub, find the earlier version and restore its text.
 
-Contact form submissions go through Web3Forms to jerry.lee@jlstgco.com. Keep the `CNAME` file: it tells GitHub Pages to serve jlstgco.com.
+Contact form submissions go through Web3Forms to the email registered with the access key (currently jerrywei.lee@gmail.com). Keep the `CNAME` file: it tells GitHub Pages to serve jlstgco.com.
 
 ## Brand
 
