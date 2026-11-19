@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · J&amp;L</title>
+<meta name="description" content="Tell J&amp;L what you have built. We reply within two business days with how we would approach your first 90 days.">
+<link rel="canonical" href="https://jlstgco.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="J&amp;L">
+<meta property="og:title" content="Contact · J&amp;L">
+<meta property="og:description" content="Tell us what you've built.">
+<meta property="og:url" content="https://jlstgco.com/contact.html">
+<meta name="theme-color" content="#17191B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="J&amp;L home">J<span>&amp;</span>L</a>
+    <nav class="nav" aria-label="Main">
+      <a href="approach.html">Approach</a>
+      <a href="approach.html#services">Services</a>
+      <a href="about.html">About</a>
+      <a class="btn btn-accent" href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="dark grid-bg">
+    <div class="wrap page-hero">
+      <p class="kicker">Contact</p>
+      <h1 class="h1"><span class="dim">Tell us what you've built.</span>We'll tell you who needs to <span class="hl">hear</span> it.</h1>
+      <p class="lead">Share a few lines about your company and what you want to achieve. We reply within two business days with how we'd approach your first 90 days.</p>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap section">
+      <div class="split" style="align-items: flex-start">
+        <div>
+          <p class="kicker">What happens next</p>
+          <ol class="steps">
+            <li><span>01</span>We read your note and look at your company.</li>
+            <li><span>02</span>We reply within two business days to set up a 30-minute call.</li>
+            <li><span>03</span>On the call, we share a first view of your 90 days.</li>
+          </ol>
+        </div>
+
+        <div>
+          <form id="contact-form" class="form" action="FORM_ENDPOINT" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New enquiry from jlstgco.com">
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
+            <div class="field">
+              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="email">Work email <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="topic">What can we help with?</label>
+              <select id="topic" name="topic">
+                <option>A 90-day priority project</option>
+                <option>Annual marketing and BD planning</option>
+                <option>Executive messaging and events</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Tell us about your technology and your goal <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button class="btn btn-ink" type="submit">Send</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="form-done" id="form-done" hidden>
+            <h2 class="h2">Thank you.</h2>
+            <p class="body" style="margin-top: 16px">We've received your note and will reply within two business days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  var done = document.getElementById('form-done');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      status.textContent = 'Please fill in your name, a valid email and a short message.';
+      form.reportValidity();
+      return;
+    }
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('bad status');
+        form.hidden = true; done.hidden = false; done.querySelector('h2').focus && done.querySelector('h2').setAttribute('tabindex', '-1'); done.querySelector('h2').focus();
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = 'Send';
+        status.textContent = 'Something went wrong. Please try again in a moment.';
+      });
+  });
+})();
+</script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span><span class="logo">J<span>&amp;</span>L</span>J&amp;L Co. Ltd. · Marketing Strategy for Technology</span>
+    <span class="foot-links"><a href="contact.html">Contact</a><span>© 2026 J&amp;L Co. Ltd.</span></span>
+  </div>
+</footer>
+</body>
+</html>

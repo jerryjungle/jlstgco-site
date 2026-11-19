@@ -135,3 +135,20 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
   .btn { transition: none; }
   .btn:hover { transform: none; }
 }
+
+/* Contact form */
+.steps { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line-2); }
+.steps li { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line-2); font-size: 16px; line-height: 1.6; color: var(--text); }
+.steps span { font-size: 13px; font-weight: 600; color: var(--muted); padding-top: 3px; min-width: 22px; }
+.form { display: flex; flex-direction: column; gap: 22px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-size: 14px; font-weight: 600; }
+.req { color: var(--muted); }
+.field input, .field select, .field textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--white); border: 1px solid var(--line-2); border-radius: 8px; padding: 13px 14px; min-height: 48px; width: 100%; }
+.field textarea { resize: vertical; min-height: 140px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--ink); outline-offset: 1px; border-color: var(--ink); }
+.form .btn { align-self: flex-start; border: 0; cursor: pointer; min-height: 52px; padding: 16px 32px; }
+.form .btn:disabled { opacity: .6; cursor: default; transform: none; }
+.form-status { font-size: 14px; color: #A0281E; min-height: 20px; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.nav .btn[aria-current="page"] { color: var(--ink); box-shadow: none; }
