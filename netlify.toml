@@ -1,5 +1,0 @@
-# Netlify settings for jlstgco.com
-# No build step: the files in this folder are the site.
-[build]
-  publish = "."
-  command = ""
