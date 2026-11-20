@@ -201,3 +201,8 @@ body { font-size: 18px; }
 .btn-light:hover { background: #D4F76A; color: var(--ink); }
 .nav .btn-nav { background: var(--accent); color: var(--ink); border: 0; }
 .nav .btn-nav:hover, .nav .btn-nav[aria-current="page"] { background: #D4F76A; color: var(--ink); border: 0; box-shadow: none; }
+
+/* Tighter hero top spacing */
+.hero { padding-top: clamp(64px, 8vw, 112px); padding-bottom: clamp(80px, 10vw, 136px); }
+.page-hero { padding-top: clamp(56px, 7vw, 96px); }
+.hero .kicker, .page-hero .kicker { margin-bottom: 28px; }
