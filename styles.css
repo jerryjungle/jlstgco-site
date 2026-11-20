@@ -216,3 +216,7 @@ body { font-size: 18px; }
 .page-hero { padding-bottom: clamp(56px, 7vw, 88px); }
 .hero { padding-bottom: clamp(64px, 8vw, 104px); }
 .kicker { margin-bottom: 18px; }
+
+/* Team groups */
+.team-group { font-size: 15px; font-weight: 700; color: var(--ink); margin: 40px 0 0; padding-top: 20px; border-top: 1px solid var(--line-2); }
+.team-group + .team-row { margin-top: 24px; }
