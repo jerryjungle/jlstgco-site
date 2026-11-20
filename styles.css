@@ -206,3 +206,13 @@ body { font-size: 18px; }
 .hero { padding-top: clamp(64px, 8vw, 112px); padding-bottom: clamp(80px, 10vw, 136px); }
 .page-hero { padding-top: clamp(56px, 7vw, 96px); }
 .hero .kicker, .page-hero .kicker { margin-bottom: 28px; }
+
+/* Tighter section rhythm */
+:root { --section: clamp(56px, 7vw, 96px); }
+.section { padding-top: var(--section); padding-bottom: var(--section); }
+.cols { margin-top: 44px; }
+.cols-wide { margin-top: 40px; }
+.principle { padding: 24px 0 28px; }
+.page-hero { padding-bottom: clamp(56px, 7vw, 88px); }
+.hero { padding-bottom: clamp(64px, 8vw, 104px); }
+.kicker { margin-bottom: 18px; }
