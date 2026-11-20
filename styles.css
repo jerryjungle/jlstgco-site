@@ -195,3 +195,9 @@ body { font-size: 18px; }
 .cta p { font-size: 18px; }
 .site-footer .wrap { font-size: 15px; }
 .tagline { font-size: 17px; }
+
+/* Chartreuse block buttons (restored at owner's request) */
+.btn-light { background: var(--accent); color: var(--ink); }
+.btn-light:hover { background: #D4F76A; color: var(--ink); }
+.nav .btn-nav { background: var(--accent); color: var(--ink); border: 0; }
+.nav .btn-nav:hover, .nav .btn-nav[aria-current="page"] { background: #D4F76A; color: var(--ink); border: 0; box-shadow: none; }
