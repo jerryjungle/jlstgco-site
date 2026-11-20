@@ -164,3 +164,34 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
 .nav .btn-nav:hover, .nav .btn-nav[aria-current="page"] { color: var(--paper); border-color: var(--paper); box-shadow: none; }
 .btn { font-weight: 700; }
 .form .btn { font-weight: 700; }
+
+/* Type scale v2: larger sizes for Calibri/Carlito, which run smaller than most web fonts.
+   Brand web range: headings 40–64 px, body 16–18 px. */
+body { font-size: 18px; }
+.nav { font-size: 16px; }
+.kicker { font-size: 14px; }
+.h1 { font-size: clamp(44px, 5.4vw, 64px); }
+.h2 { font-size: clamp(32px, 3.4vw, 44px); }
+.h2-lg { font-size: clamp(36px, 3.8vw, 52px); }
+.lead { font-size: 20px; line-height: 1.6; max-width: 600px; }
+.body { font-size: 18px; line-height: 1.7; }
+.item .tag { font-size: 15px; }
+.item h3 { font-size: 22px; }
+.item h3.lg { font-size: 21px; }
+.item p { font-size: 18px; }
+.principle .num { font-size: 15px; }
+.principle h3 { font-size: 24px; }
+.principle p { font-size: 18px; }
+.chip { font-size: 15px; }
+.stat-label { font-size: 17px; }
+.list li { font-size: 18px; }
+.steps li { font-size: 18px; }
+.steps span { font-size: 15px; }
+.field label { font-size: 16px; }
+.field input, .field select, .field textarea { font-size: 18px; }
+.form-status { font-size: 16px; }
+.btn { font-size: 17px; }
+.nav .btn { font-size: 16px; }
+.cta p { font-size: 18px; }
+.site-footer .wrap { font-size: 15px; }
+.tagline { font-size: 17px; }
